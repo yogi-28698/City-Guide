@@ -61,11 +61,38 @@ h1 {
     font-family: "Montserrat-Light", "Ubuntu";
 }
 
-/* Button in Titile */
+/* Button in Title */
 
 .explore-button {
     font-family: "Ubuntu";
     font-weight: 550;
     margin: 5% 3% 5% 0;
 }
+
+/* Features */
+
+#features {
+    text-align: center;
+    padding: 5% 15%;
+}
+
+.feature-box {
+    padding: 5%;
+    font-family: "Ubuntu";
+}
+
+.desc-para {
+    font-family: "Ubuntu";
+    font-size: 1.2rem;
+    color: #8f8f8f;
+}
+  
+.icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+  }
+  
+  .icon:hover {
+    color: #ff4c68;
+  }
 
