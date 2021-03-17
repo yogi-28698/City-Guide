@@ -1,3 +1,26 @@
+<?php 
+
+include 'Comment/config.php';
+
+error_reporting(0); // For not showing any error
+
+if (isset($_POST['submit'])) { // Check press or not Post Comment Button
+	$name = $_POST['name']; // Get Name from form
+	$email = $_POST['email']; // Get Email from form
+	$comment = $_POST['comment']; // Get Comment from form
+
+	$sql = "INSERT INTO comments (name, email, comment)
+			VALUES ('$name', '$email', '$comment')";
+	$result = mysqli_query($conn, $sql);
+	if ($result) {
+		echo "<script>alert('Comment added successfully.')</script>";
+	} else {
+		echo "<script>alert('Comment does not add.')</script>";
+	}
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +49,43 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </head>
+
+<style type = "text/css">
+
+  .labels {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu';
+  }
+
+  #comments {
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu';
+    margin:30px 0 60px 0;
+  }
+
+  #user_name {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu';
+  }
+
+  .prev-comments {
+    margin: 35px 10px;
+  }
+
+  #comments {
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: bolder;
+  }
+
+
+</style>
+
 <body>
 
 <section class="title">
@@ -53,15 +113,16 @@
         <li class="navbar-item">
           <a class="nav-link" href="Login_Register/login.php">
             <?php
-                session_start();
-                require_once 'Login_Register/includes/database.php';
-                require_once 'Login_Register/includes/register-inc.php';
+                // session_start();
+                // require_once 'Login_Register/includes/database.php';
+                // require_once 'Login_Register/includes/register-inc.php';
+                // // require_once 'Login_Register/includes/login-inc.php';
 
-                if ($_SESSION['sessionId']) {
-                    echo "You are Logged in!";
-                } else {
-                    echo "Login";
-                }
+                // if ($_SESSION['sessionId']) {
+                //     echo "Hello " . $_SESSION['sessionUser'];
+                // } else {
+                //     echo "Login";
+                // }
 
             ?>
           </a>
@@ -94,9 +155,50 @@
 
 <?php
   include_once 'Maps/map_kanpur.php';
-  include_once 'Comment/index.php'
-  // include_once 'Comment/style_comment.css';
 ?>
+<div class="comments" style = "margin:50px 30px;">
+<h1 id = comments>User Reviews</h1>
+  <form method = "POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4" class = "labels">User Name</label>
+      <input type="text" name = "name" class="form-control" id="inputEmail4" placeholder = "User Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4" class = "labels">Email</label>
+      <input type="email" name = "email" class="form-control" id="inputPassword4" placeholder = "Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" class = "labels">Give Review</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "comment"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" name = "submit">Post Comment</button>
+</form>
+<div class="jumbotron jumbotron-fluid">
+  <div class="prev-comments" style = "margin:35px 10px;">
+			<?php 
+			
+			$sql = "SELECT * FROM comments";
+			$result = mysqli_query($conn, $sql);
+			if (mysqli_num_rows($result) > 0) {
+				while ($row = mysqli_fetch_assoc($result)) {
+
+			?>
+			<div class="single-item">
+				<h4 id="user_name"><?php echo $row['name']; ?></h4>
+				<p class="info"><?php echo $row['email']; ?></p>
+				<p class="info"><?php echo $row['comment']; ?></p>
+			</div>
+			<?php
+
+				}
+			}
+			
+			?>
+		</div>
+</div>
+</div>
 
 
 <footer class="footer">

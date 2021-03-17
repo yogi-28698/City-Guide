@@ -1,5 +1,9 @@
 <?php
 
+    // session_start();
+    $_SESSION['sessionId'] = false;
+
+
     if (isset($_POST['submit'])) {
 
         ///Add Connection to the Database

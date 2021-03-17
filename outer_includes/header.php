@@ -26,9 +26,10 @@
                 session_start();
                 require_once 'Login_Register/includes/database.php';
                 require_once 'Login_Register/includes/register-inc.php';
+                // require_once 'Login_Register/includes/login-inc.php';
 
                 if ($_SESSION['sessionId']) {
-                    echo "You are Logged in!";
+                    echo "Hello " . $_SESSION['sessionUser'];
                 } else {
                     echo "Login";
                 }
