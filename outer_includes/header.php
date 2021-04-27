@@ -28,12 +28,6 @@
           <a class="nav-link" href="Login_Register/login.php" style = "color:#FFF;">
             <?php
                 include 'Login_Register/includes/login-inc.php';
-                //$_SESSION['sessionUser'] = "Yogesh Verma";
-                // if (!isset($_SESSION['sessionId']))
-                //     $userName = "Yogeh Verma";
-                // else
-                //     $userName = $_SESSION['sessionUser'];
-                //$_SESSION['sessionUser'] = $username;
                 if (isset($_SESSION['sessionId']) && isset($_SESSION['sessionUser'])) {
                     echo "Hello " . $_SESSION['sessionUser'];
                     
@@ -41,7 +35,7 @@
                     echo "Login";
                 }
 
-                //echo $_SESSION['sessionId'];
+                
 
             ?>
           </a>

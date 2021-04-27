@@ -66,7 +66,7 @@
             <div class="card-body">
               <h5 class="card-title city-name">Lucknow</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-outline-dark">Explore City</a>
+              <a href="Lucknow.php" class="btn btn-outline-dark">Explore City</a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
             <div class="card-body">
               <h5 class="card-title city-name">Agra</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-outline-dark">Explore City</a>
+              <a href="Agra.php" class="btn btn-outline-dark">Explore City</a>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@
             <div class="card-body">
               <h5 class="card-title city-name">Delhi</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-outline-dark">Explore City</a>
+              <a href="Delhi.php" class="btn btn-outline-dark">Explore City</a>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
             <div class="card-body">
               <h5 class="card-title city-name">Mumbai</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-outline-dark">Explore City</a>
+              <a href="Mumbai.php" class="btn btn-outline-dark">Explore City</a>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@
             <div class="card-body">
               <h5 class="card-title city-name">Bangalore</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-outline-dark">Explore City</a>
+              <a href="Bangalore.php" class="btn btn-outline-dark">Explore City</a>
             </div>
           </div>
         </div>

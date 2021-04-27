@@ -88,8 +88,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
 <body>
 
-
-
 <section class="title">
 
 <div class="container-fluid">
@@ -97,7 +95,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 <!-- Nav-Bar -->
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="./index.php">Kanpur City</a>
+    <a class="navbar-brand" href="./Lucknow.php">Lucknow City</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -156,7 +154,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 <h1 style="text-align:center; margin:20px 0 20px 0">Explore Kanpur City</h1>
 
 <?php
-  include_once 'Maps/map_kanpur.php';
+  include_once 'Maps/map_lucknow.php';
 ?>
 <div class="comments" style = "margin:50px 30px;">
 <h1 id = comments>User Reviews</h1>
