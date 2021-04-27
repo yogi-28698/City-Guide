@@ -1,3 +1,7 @@
+<?php
+     session_start();
+?>
+
 <section class="title">
 
 <div class="container-fluid">
@@ -21,22 +25,34 @@
           <a class="nav-link" href="./index.php">Home</a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link" href="Login_Register/login.php">
+          <a class="nav-link" href="Login_Register/login.php" style = "color:#FFF;">
             <?php
-                session_start();
-                require_once 'Login_Register/includes/database.php';
-                require_once 'Login_Register/includes/register-inc.php';
-                // require_once 'Login_Register/includes/login-inc.php';
-
-                if ($_SESSION['sessionId']) {
+                include 'Login_Register/includes/login-inc.php';
+                //$_SESSION['sessionUser'] = "Yogesh Verma";
+                // if (!isset($_SESSION['sessionId']))
+                //     $userName = "Yogeh Verma";
+                // else
+                //     $userName = $_SESSION['sessionUser'];
+                //$_SESSION['sessionUser'] = $username;
+                if (isset($_SESSION['sessionId']) && isset($_SESSION['sessionUser'])) {
                     echo "Hello " . $_SESSION['sessionUser'];
+                    
                 } else {
                     echo "Login";
                 }
 
+                //echo $_SESSION['sessionId'];
+
             ?>
           </a>
         </li>
+        <?php
+                 if (isset($_SESSION['sessionId']) && isset($_SESSION['sessionUser']))  {
+                    echo "<li class='navbar-item'>
+                    <a class='nav-link' href='Login_Register/login.php'>Logout</a>
+                    </li>";
+                 }
+        ?>
         <!-- <li class="navbar-item">
           <a class="nav-link" href="./index.html">Signup</a>
         </li> -->

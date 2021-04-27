@@ -1,5 +1,7 @@
 <?php
 
+    $_SESSION['sessionId'] = false;
+
     if (isset($_POST['submit'])) {
         //Add Database Connection
         require 'database.php';

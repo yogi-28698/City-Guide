@@ -1,7 +1,7 @@
 <?php
 
     //Params to connect to a Database
-    $dbHost = "localhost:3306";
+    $dbHost = "localhost:3307";
     $dbUser = "root";
     $dbPass = '';
     $dbName = "phptutorial";

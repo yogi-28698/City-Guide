@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <li class="navbar-item">
           <a class="nav-link" href="./index.php">Home</a>
         </li>
-        <li class="navbar-item">
+        <li class="navbar-item">  
           <a class="nav-link" href="Login_Register/login.php">
             <?php
                 // session_start();

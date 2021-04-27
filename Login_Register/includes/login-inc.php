@@ -1,22 +1,18 @@
 <?php
 
-    // session_start();
-    $_SESSION['sessionId'] = false;
-
-
+     //session_start();
     if (isset($_POST['submit'])) {
 
         ///Add Connection to the Database
         require 'database.php';
-
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        session_start();
-        $_SESSION['sessionId'] = false;
+         session_start();
+         $_SESSION['sessionId'] = false;
 
         if (empty($username) || empty($password)) {
-            header("Location: ../index.php?error = emptyfields");
+            header("Location: ../../index.php?error = emptyfields");
             exit();
         } else {
             $sql = "SELECT * FROM users WHERE username = ?";
@@ -38,7 +34,8 @@
                         session_start();
                         $_SESSION['sessionId'] = $row['id'];
                         $_SESSION['sessionUser'] = $row['username'];
-                        header("Location: ../../index.php?success = loggedin");
+            
+                        header("Location: ../../index.php?success = loggedin " . $_SESSION['sessionId'] . " " . $_SESSION['sessionUser']);
                         exit();
                     } else {
                         header("Location: ../index.php?error = wrongpassword");
@@ -52,8 +49,11 @@
         } 
 
     } else {
-        header("Location: ../index.php?error = accessforbidden");
-        exit();
+        $_SESSION['sessionId'] = false;
+        // header("Location: index.php?success = loggedin");
+        // exit();
     }
+
+    session_abort();
 
 ?>
