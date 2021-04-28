@@ -58,7 +58,7 @@
   <div class="row">
       <div class="col-lg-6">  
           <h1>A Path in Unknown</h1>
-          <button type="button" class="btn btn-lg btn-outline-light btn-logo explore-button"><img src="HatchfulExport-All/telegram.png">  EXPLORE CITIES</button>
+          <a href = "#city-grid" type="button" class="btn btn-lg btn-outline-light btn-logo explore-button"><img src="HatchfulExport-All/telegram.png">  EXPLORE CITIES</a>
       </div>
 
       <div class="col=lg-6">

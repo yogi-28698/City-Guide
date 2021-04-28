@@ -1,6 +1,7 @@
 <?php 
 
 include 'Comment/config.php';
+include 'outer_includes/head.php';
 
 error_reporting(0); // For not showing any error
 
@@ -58,12 +59,17 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     font-family: 'Ubuntu';
   }
 
-  #comments {
+  .places-btn {
+    font-size: 1.2rem;
+    font-family: 'Ubuntu';
+  }
+
+  /* #comments {
     font-size: 1.7rem;
     line-height: 1.5rem;
     font-family: 'Ubuntu';
     margin:30px 0 60px 0;
-  }
+  } */
 
   #user_name {
     font-size: 1.5rem;
@@ -81,6 +87,10 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     font-size: 3.5rem;
     line-height: 1.5;
     font-weight: bolder;
+  }
+
+  .city-name {
+    margin-bottom: 8%;
   }
 
 
@@ -112,26 +122,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <li class="navbar-item">
           <a class="nav-link" href="./index.php">Home</a>
         </li>
-        <li class="navbar-item">  
-          <a class="nav-link" href="Login_Register/login.php">
-            <?php
-                // session_start();
-                // require_once 'Login_Register/includes/database.php';
-                // require_once 'Login_Register/includes/register-inc.php';
-                // // require_once 'Login_Register/includes/login-inc.php';
-
-                // if ($_SESSION['sessionId']) {
-                //     echo "Hello " . $_SESSION['sessionUser'];
-                // } else {
-                //     echo "Login";
-                // }
-
-            ?>
-          </a>
-        </li>
-        <!-- <li class="navbar-item">
-          <a class="nav-link" href="./index.html">Signup</a>
-        </li> -->
       </ul>
     </div>
 
@@ -158,6 +148,70 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 <?php
   include_once 'Maps/map_kanpur.php';
 ?>
+
+
+<!-- Places Grid  -->
+
+<h1 id = comments>Explore Places</h1>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Historic Places</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Schools</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Colleges</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Restaurants</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Malls</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title city-name">Hospitals</h5>
+        <a href="#" class="btn btn-outline-dark places-btn">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <div class="comments" style = "margin:50px 30px;">
 <h1 id = comments>User Reviews</h1>
   <form method = "POST">

@@ -129,9 +129,10 @@ h1 {
       margin: 5% 0;
   }
 
-.city-name {
+.card-title {
     font-family: "Ubuntu";
     font-size: 2rem;
+    margin: 0% 0% 50% 0%;
 }
 
 /* Search-Field */
@@ -173,4 +174,3 @@ h1 {
 .footerabt{
   padding-bottom: 20px;
 }
-

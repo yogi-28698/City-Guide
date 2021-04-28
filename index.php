@@ -33,7 +33,7 @@
 
     <section id="features">
 
-      <h1>Explore Your City</h1>
+      <h1 id = "city-grid">Explore Your City</h1>
 
           <!-- Search Form -->
 
@@ -41,9 +41,9 @@
 
       <div class="search-box">
         <div class="input-group">
-          <input type="text" class="form-control placehld" placeholder="City Name" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <input type="text" id = "cityName" class="form-control placehld" placeholder="City Name" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
           <div class="input-group-append" id="button-addon4">
-            <button class="btn btn-outline-secondary" type="button"><span 
+            <button class="btn btn-outline-secondary" type="button" onclick = "openfile()"><span 
               class="search-butto"><span class="search-button">Search</span></button>
           </div>
         </div>
@@ -55,8 +55,7 @@
             <img class = "city-image" src="HatchfulExport-All/kanpur.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Kanpur</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Kanpur.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Kanpur.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -65,8 +64,7 @@
             <img class = "city-image" src="HatchfulExport-All/lucknow.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Lucknow</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Lucknow.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Lucknow.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -75,8 +73,7 @@
             <img class = "city-image" src="HatchfulExport-All/agra.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Agra</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Agra.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Agra.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -88,8 +85,7 @@
             <img class = "city-image" src="HatchfulExport-All/delhi.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Delhi</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Delhi.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Delhi.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -98,8 +94,7 @@
             <img class = "city-image" src="HatchfulExport-All/mumbai.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Mumbai</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Mumbai.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Mumbai.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -108,8 +103,7 @@
             <img class = "city-image" src="HatchfulExport-All/bangalore.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title city-name">Bangalore</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="Bangalore.php" class="btn btn-outline-dark">Explore City</a>
+              <a href="Bangalore.php" class="btn btn-outline-dark places-btn">Explore City</a>
             </div>
           </div>
         </div>
@@ -123,6 +117,14 @@
    <?php
       include 'outer_includes/footer.php'
    ?>
+
+   <script type = "text/javascript">
+
+      function openfile() {
+        window.location = document.getElementById("cityName").value + ".php";
+      }
+
+  </script>
 
 
 </body>
