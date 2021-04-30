@@ -158,7 +158,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Historic Places</h5>
-        <a href="kanpur_amenities/historic_places.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/historic_places.php?place=Historic Places" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Schools</h5>
-        <a href="kanpur_amenities/schools.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/schools.php?place=Schools" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -174,7 +174,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Colleges</h5>
-        <a href="kanpur_amenities/colleges.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/colleges.php?place=Colleges" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -185,7 +185,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Restaurants</h5>
-        <a href="kanpur_amenities/restaurants.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/restaurants.php?place=Restaurants" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Malls</h5>
-        <a href="kanpur_amenities/malls.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/malls.php?place=Malls" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -201,7 +201,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <div class="card">
       <div class="card-body">
         <h5 class="card-title city-name">Hospitals</h5>
-        <a href="kanpur_amenities/hospitals.php" class="btn btn-outline-dark places-btn">Go somewhere</a>
+        <a href="kanpur_amenities/hospitals.php?place=Hospitals" class="btn btn-outline-dark places-btn">Go somewhere</a>
       </div>
     </div>
   </div>
