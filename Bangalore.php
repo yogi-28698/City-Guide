@@ -121,26 +121,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <li class="navbar-item">
           <a class="nav-link" href="./index.php">Home</a>
         </li>
-        <li class="navbar-item">  
-          <a class="nav-link" href="Login_Register/login.php">
-            <?php
-                // session_start();
-                // require_once 'Login_Register/includes/database.php';
-                // require_once 'Login_Register/includes/register-inc.php';
-                // // require_once 'Login_Register/includes/login-inc.php';
-
-                // if ($_SESSION['sessionId']) {
-                //     echo "Hello " . $_SESSION['sessionUser'];
-                // } else {
-                //     echo "Login";
-                // }
-
-            ?>
-          </a>
-        </li>
-        <!-- <li class="navbar-item">
-          <a class="nav-link" href="./index.html">Signup</a>
-        </li> -->
       </ul>
     </div>
 
@@ -162,7 +142,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
 </section>
 
-<h1 style="text-align:center; margin:20px 0 20px 0">Explore Kanpur City</h1>
+<h1 style="text-align:center; margin:20px 0 20px 0">Explore Bangalore City</h1>
 
 <?php
   include_once 'Maps/map_bangalore.php';
